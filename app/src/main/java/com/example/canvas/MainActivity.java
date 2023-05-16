@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
             mPaint.setColor(mColorCar1);
 
-            int width = 1000; // set ukuran objek
+            int width = 1000;
             int height = 150;
 
             int x = (mCanvas.getWidth() - width) / 2; // hitung koordinat pusat x
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             mPaint.setColor(mColorCar2);
 
-            int width = 600; // set ukuran objek
+            int width = 600;
             int height = 200;
 
             int x = (mCanvas.getWidth() - width) / 2;
@@ -199,8 +199,8 @@ public class MainActivity extends AppCompatActivity {
             int width = 25; // set ukuran objek
             int height = 254;
 
-            int x = ((mCanvas.getWidth() - width) / 2) - 70; // hitung koordinat pusat x
-            int y = ((mCanvas.getHeight() - height) / 2) - 50; // hitung koordinat pusat y
+            int x = ((mCanvas.getWidth() - width) / 2) - 70;
+            int y = ((mCanvas.getHeight() - height) / 2) - 50;
 
             Path path = new Path();
             path.moveTo(x, y);
@@ -209,21 +209,21 @@ public class MainActivity extends AppCompatActivity {
             path.lineTo(x, y + height + 28);
             path.lineTo(x, y);
 
-            mCanvas.save(); // simpan state canvas saat ini
+            mCanvas.save();
             mCanvas.rotate(30, x + width / 2, y + height / 2);
             mCanvas.drawPath(path, mPaint);
-            mCanvas.restore(); // kembalikan state canvas ke semula
+            mCanvas.restore();
 
         }
         else if (count == 7) {
 
             mPaint.setColor(Color.BLACK);
 
-            int width = 120; // set ukuran objek
+            int width = 120;
             int height = 15;
 
-            int x = ((mCanvas.getWidth() - width) / 2) - 50; // hitung koordinat pusat x
-            int y = ((mCanvas.getHeight() - height) / 2) - 170; // hitung koordinat pusat y
+            int x = ((mCanvas.getWidth() - width) / 2) - 50;
+            int y = ((mCanvas.getHeight() - height) / 2) - 170;
 
 
             Path path = new Path();
@@ -366,12 +366,6 @@ public class MainActivity extends AppCompatActivity {
         else {
         }
 
-
-        // Menggambar trapesium dengan path
-
-
-
-        // Set the ImageView to display the generated bitmap
         mImageView.setImageBitmap(mBitmap);
         view.invalidate();
     }
